@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sonte Adamu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+      /*---------------------------------------------------home image------------------------------------------*/
+    
+      .img-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      @meia (max-width: 576px) {
+        .img-container {
+          max-width: 500px;
+        }
+      }
+      p{
+    font-family: 'pacifico', cursive;
+}
+/*-----------------------------------------------------triangles-------------------------------------------*/
+
+html{
+  scroll-behavior: smooth;
+}
+/*--------------------------------------------------home----------------------------------------------*/
+.home{
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url()
+ 
+}
+
+/*----------------------------------------------hire me button------------------------------------------*/
+
+.btn:hover {
+            transform: scale(1.1);
+            
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.669);
+        }
+
+.ease-out {
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}
+.outline-purple-500 {
+    outline-color: #a855f7;
+}
+
+.outline-double {
+    outline-style: double;
+}
+.shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #1c1c1c00), var(--tw-ring-shadow, 0 0 #29292900), var(--tw-shadow);
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+   
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.py-2 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(126 34 206 / var(--tw-bg-opacity));
+}
+.rounded-full {
+    border-radius: 9999px;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.relative {
+    position: relative;
+}
+/*----------------------------------------- read more button--------------------------------------------*/
+button, [role=button] {
+    cursor: pointer;
+}
+button, input:where([type=button]), input:where([type=reset]), input:where([type=submit]) {
+    --webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+button, select {
+    text-transform: none;
+}
+.relative {
+  width:max-content;
+}
+.text-indigo-600 {
+    --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+.font-semibold {
+    font-weight: 600;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+/*----------------------------------------------about------------------------------------------*/
+.about {
+            background: rgba(17, 17, 17, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(9, 9, 9, 0.1);
+            padding: 20px;
+            width:70%;
+            margin-left: 15%;
+            color: rgb(14, 14, 14);
+        }
+.card {
+            background: rgba(20, 20, 20, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+           
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden; /* Ensures shine effect stays within the card */
+        }
+.card-body {
+            background: transparent;
+            padding: 20px;
+        }
+        .card:hover {
+            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.7);
+        }
+
+        .shine {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(10, 10, 10, 0.2), rgba(56, 55, 55, 0) 70%);
+            transform: rotate(-30deg);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        .card:hover .shine {
+            opacity: 1;
+            animation: shine 1s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(-30deg);
+            }
+            100% {
+                transform: translateX(100%) rotate(-30deg);
+            }
+        }
+
+        .read::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 42, 184, 0.2); /* Light background on hover */
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 0; /* Behind the text */
+        }
+
+        .read:hover::after {
+            opacity: 1; /* Show the background on hover */
+        }
+
+        .read span {
+            position: relative;
+            z-index: 1; /* Above the background */
+        }
+
+
+        .read:hover {
+            color: #5364fd; /* Text color on hover */
+            transform: scale(1.05); /* Slight scaling effect */
+            box-shadow: 0 4px 20px rgba(83, 100, 253, 0.5); /* Shadow effect */
+        }
+        #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+
+body {
+    padding-top: 60px;
+}
+h1{
+  color: white;
+}
+    ::placeholder {
+        color: #ccc; /* Change to your desired light color */
+        opacity: 1; /* Adjust opacity if needed */
+    }
+          .form-control {
+            background-color: transparent; /* Transparent background */
+            color: #000; /* Text color */
+            border: 1px solid #ccc; /* Border for visibility */
+            border-radius: 4px; /* Rounded corners */
+            padding: 10px; /* Padding for input */
+            width: 100%; /* Full width */
+        }
+
+        /* Placeholder styles */
+        .form-control::placeholder {
+            color: #ccc; /* Light color for placeholder */
+            opacity: 1; /* Ensure full opacity */
+        }
+
+        /* For WebKit browsers (Chrome, Safari) */
+        .form-control::-webkit-input-placeholder {
+            color: #ccc; /* Light color for placeholder */
+            opacity: 1; /* Ensure full opacity */
+        }
+
+        /* For Firefox */
+        .form-control::-moz-placeholder {
+            color: #ccc; /* Light color for placeholder */
+            opacity: 1; /* Ensure full opacity */
+        }
+</style>
+
+
+
+  </head>
+  <body class="bg-dark" >
+      <!------------------------------------------navbar---------------------------------------------->
+     
+      <nav class="navbar nav-underline navbar-expand-lg fixed-top  ps-4 "id="navbar" style="background-color:black;">
+        <div class="container-fluid" >
+          <h1>SONTE</h1>
+          <a class="navbar-brand" href="#contact">
+          </a>
+          <div class="collapse navbar-collapse text-light pt-2" style="font-family: 'Satisfy', cursive;" id="navbarNav">
+            <ul class="navbar-nav gap-2 pt-2 ps-5">
+              <li class="nav-item ">
+                <a class="nav-link ps-5 "style=" color:white;" aria-current="page" href="home.html"><b>Home</b></a>
+              </li>
+              <li class="nav-tem">
+                <a class="nav-link "style=" color: white;" href="about.html"> <b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "style=" color: white;" href="project.html"><b>Projects</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "style=" color: white;" href="skill.html"><b>Skills</b></a>
+              </li>       
+              <li class="nav-item">
+                <a class="nav-link " style=" color:white;" href="contact.html"><b>Contact</b></a>
+              </li>
+              <li>
+                <div class="container-fluid">
+                    <form class="d-flex input-group" style="width: max-content;" role="search">
+                      <span class="input-group-text text-light " style="border-color: #d3d4cf; color: aliceblue; background-color: #29282800;" id="basic-addon1"><i class="bi bi-search"></i></span>
+                      <input class="form-control me-2 text-light" type="search" placeholder=" Search" aria-label=" Search" style="background: #24242400;color: aliceblue; border-color: #ccc5c7;">
+                      <button class="btn button btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>              
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    <section class="home responsive text-light py-5 " id="home"  >
+           <div class="container-fluid " >
+              <div class="row pt-5 mt-5">
+                <div class="col-md-6 image ps-5  mt-5">
+                  <img src="image/11zon_cropped (3).png" alt="" class="me mx-auto">
+                  <div class="card-img-overlay">
+                                            
+                  </div>
+                </div>
+                <div class="col-md-6 pt-5 -mt-12 pe-5  ms-0" style="text-align: center;" id="par"><h1 class="hi mt-5 pt-5"style="font-family: 'Satisfy', cursive;">Hello👋,I am SONTE</h1>
+                 <p >Web Developer | Designer | Tech Enthusiast.<br>
+                  </h4>
+                </p>
+                <div class="ms-5 ps-5 mt-5">
+                  <ul class="d-flex ms-5 ps-5 gap-4 list-unstyled">
+                    <li>
+                      <a href=""><i class=" ms-3 bi bi-instagram pe text-danger"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="bi bi-telegram " style="color: #53a2fd;"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="bi bi-twitter-x"></i></a>
+                    </li>                   
+                    <li>
+                      <a class=" text-light" href="#"><i class="bi bi-github"></i></a>
+                    </li>
+
+                  </ul>
+                </div>
+                <a href="https://github.com/sonteadamu">
+                  <button _ngcontent-ng-c526807300="" class="text-lg md:text-2xl rounded-full py-2 md:py-3 px-4 md:px-6 text-white transition-all cursor-pointer ease-out duration-400 bg-purple-700 hover:bg-purple-500 relative overflow-hidden group shadow-2xl outline-purple-500 outline-double hover:outline-purple-700"><span _ngcontent-ng-c526807300="" class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-50 blur-md animate-pulse"></span>
+                    <span _ngcontent-ng-c526807300="" class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-75 blur-lg"></span>
+                    <span _ngcontent-ng-c526807300="" class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-14 bg-white opacity-10 rotate-12 group-hover:-translate-x-80 ease"></span>
+                    <span _ngcontent-ng-c526807300="" class="relative font-bold">Hire Me!</span>
+                  </button>
+                </a>
+
+               </div>
+              </div>
+            </div>
+            <div class="line"></div>
+    </section>
+
+
+
+    <section class="aboutp responsive py-5 " id="About me" style="text-align: center; background-color:blueblack; border-bottom:2px solid rgb(19, 19, 19) ;border-top:2px solid rgb(17, 16, 16);">
+      <h1 class="pt-2 text-light" style="font-family: 'Satisfy', cursive;">~About~</h1>
+      <div class="about text-light pt-5 mt-5">
+        <h5 class="card-title text-light pt-5">WHO AM I?</h5>
+            <p class="card-text">
+              <large>
+                I am a dedicated Software Engineering student in Adama Science and Technology University who have a strong motivation and an unwavering passion for both web and mobile development. 
+                Currently, I am actively seeking new challenges that will further sharpen my problem-solving and coding abilities.  
+                <br><br>  
+                Throughout my academic journey, I have developed skills in various programming languages including C++, Python, JavaScript, HTML, CSS, SQL, and React.
+                 I also have experience with Node.js, Express, MongoDB, 
+                 and frameworks like Bootstrap, which allows me to create responsive and user-friendly interfaces.  
+                <br>  
+                My project experience includes developing robust database systems,library management systems, 
+                task management applications, and online shoping website. 
+                These projects have sharpen my skills in full-stack development.
+                <br>  
+                Additionally, I possess a solid understanding of data structures and algorithms, 
+                which enables me to write efficient code and optimize performance in my projects.  
+                <br><br>  
+                Beyond my technical skills, I am adaptable and quick to learn, have strong analytical thinking and creative problem-solving abilities, 
+                Can communicate effectively and work well in a team, 
+                I have a passion for design and enjoy creating visually appealing applications.
+                <br>
+                I am committed to continuous personal and professional development.
+              
+            </large>
+                
+            </p>       
+            
+                 <div class="content-container" style="display: flex; justify-content: center; margin: 20px 0;">
+                  <div class="relative border border-white border-opacity-50 my-6 rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                      <a target="_blank" class="button read text-light" href="https://github.com/sonteadamu" style="color: #add8e6; border-radius: 9999px;">
+                          Read more 
+                          <span aria-hidden="true">→</span>
+                      </a>
+                  </div>
+              </div>
+             
+          
+          
+        </div>
+      </div>
+    </section>
+
+
+    
+
+    
+    <section class="projects colorlib-services responsive text-light" id="projects" data-section="projects">
+      <h1 style="text-align: center;font-family: 'Satisfy', cursive;" class="pt-5">~Projects~</h1>
+      <div class="colorlib-narrow-content px-5 mx-3 pt-5 pb-5" >
+        <div class="row row-pt-md px-5 pt-5">
+          <div class="col-md-6 text-center animate__animated animate__fadeIn animate__delay-1s">
+            <div class="projects proj color-1">
+              <span class="icon">
+                <i class="icon-bulb"></i>
+              </span>
+              <div class="desc pt-5" style="color: #c2c2c2;">
+                <h3>Art Gallery</h3>
+               
+                <a href="https://github.com/sonteadamu/works" class="btn btn-primary" >Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center animate__animated animate__fadeIn animate__delay-2s">
+            <div class="projects proj color-3">
+              <span class="icon">
+                <i class="icon-user"></i>
+              </span>
+              <div class="desc pt-5" style="color: #c2c2c2;">
+                <h3>Library managment system</h3>
+               
+                <a href="https://github.com/sonteadamu/works" class="btn" style="background-color: rgb(253, 185, 58);">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center animate__animated animate__fadeIn animate__delay-3s">
+            <div class="projects proj color-4">
+              <span class="icon">
+                <i class="icon-world"></i>
+              </span>
+              <div class="desc pt-5 " style="color: #c2c2c2;">
+                <h3>Task Manager</h3>
+              
+                <a href="https://github.com/sonteadamu/task-manager" class="btn text-light" style="background-color: rgba(124, 9, 124, 0.669);">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <section class="skill" id="skill" style=" text-align: center; background-color: rgb(25, 23, 23); border-bottom: 2px solid rgb(16, 15, 15);">
+      <div><h1 class="text-light" style="font-family: 'Satisfy', cursive;">~skills~</h1>
+      </div>
+      <div class=" row py-3 mx-4 mt-5 ">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 mt-2 ms-4">
+              <img src="image/bhtml.jpg" alt="" style="width: 80px; height: 100px;">
+            </div>
+            <div class="col-5 progress mt-5" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg" style="width: 90%; background-color: #7996a7;"></div>
+            </div>
+            <div class="col-3 mt-5"><p class="text-light">90%</p></div>
+          </div>          
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 mt-2 ms-4">
+              <img src="image/bcpp.jpg" alt="" style="width: 80px; height: 80px;">
+            </div>
+            <div class="col-5 progress mt-5" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%; background-color: #7d85cd;"></div>
+            </div>
+            <div class="col-3 mt-5"><p class="text-light">80%</p></div>
+          </div>          
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 mt-2 ms-3">
+              <img src="image/bjs.jpg" alt="" style="width: 140px; height: 100px;">
+            </div>
+            <div class="col-5 progress mt-5" role="progressbar" aria-label="Animated striped example" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 55%; background-color: #c5d861;"></div>
+            </div>
+            <div class="col-3 mt-5"><p class="text-light">70%</p></div>
+          </div>          
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 mt-2 ms-4">
+              <img src="image/bcss.jpg" alt="" style="width: 100px; height: 80px;">
+            </div>
+            <div class="col-5 progress mt-5" role="progressbar" aria-label="Animated striped example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%"></div>
+            </div>
+            <div class="col-3 mt-5"><p class="text-light">95%</p></div>
+          </div>          
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 mt-2 ms-4">
+              <img src="image/sql.jpg" alt="" style="width: 80px; height: 80px;">
+            </div>
+            <div class="col-5 progress mt-5" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%; background-color: rgb(59, 114, 96);"></div>
+            </div>
+            <div class="col-3 mt-5"><p class="text-light">90%</p></div>
+          </div>          
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 mt-2 ms-4">
+              <img src="image/bpyt.jpg" alt="" style="width: 140px; height: 130px;">
+            </div>
+            <div class="col-5 progress mt-5" role="progressbar" aria-label="Animated striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%; background-color: #c5d861;"></div>
+            </div>
+            <div class="col-3 mt-5"><p class="text-light">50%</p></div>
+          </div>          
+        </div>
+
+ 
+                  
+      </div>
+    </section>
+
+
+
+    <section class="contact mx-5 px-5 py-5 pb-5" id="contact" style="align-items: center;">
+      <div>
+          <div class="row">
+              <div class="col-md-12 animate-box bg-gradient-to-r from-purple-500 to-pink-500" data-animate-effect="fadeInLeft">
+               
+                  <h2 class="colorlib-heading text-light" style="text-align: center; font-family: 'Satisfy', cursive;">~Contact~</h2>
+              </div>
+          </div>
+          <div class="row px-5 mx-5 pt-5">
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+                          <form id="contactForm">
+                              <div class="form-group mb-4">
+                                  <input type="text" name="name" class="form-control border bg-dark rounded w-full py-2 px-3 text-light" style="background-color: #0000; color: #000;" placeholder="Name" required>
+                              </div>
+                              <div class="form-group mb-4">
+                                  <input type="email" name="email" class="form-control border bg-dark rounded w-full py-2 px-3 text-light" placeholder="Email" required>
+                              </div>
+                              <div class="form-group mb-4">
+                                  <input type="text" name="subject" class="form-control border bg-dark rounded w-full py-2 px-3 text-light" placeholder="Subject" required>
+                              </div>
+                              <div class="form-group mb-4">
+                                  <div class="textarea-container">
+                                      <textarea class="bg-dark form-control border rounded w-full py-2 px-3 textarea text-light" name="message" id="message" cols="30" rows="7" placeholder="Do you have a great idea on your mind or need help overcoming challenges in your business? Send me a message and let's chat!" required></textarea>
+                                  </div>
+                              </div>
+                              <div class="form-group flex justify-end">
+                                  <button type="submit" id="submitButton" class="btn text-lg md:text-2xl rounded-full py-2 md:py-3 px-4 md:px-6 text-white transition-all cursor-pointer ease-out duration-400 bg-purple-700 hover:bg-purple-500 relative overflow-hidden group shadow-2xl outline-purple-500 outline-double hover:outline-purple-700">
+                                      <span class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-50 blur-md animate-pulse"></span>
+                                      <span class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-75 blur-lg"></span>
+                                      <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-14 bg-white opacity-10 rotate-12 group-hover:-translate-x-80 ease"></span>
+                                      <span class="relative font-bold">Send message</span>
+                                      <div id="buttonSpinner" class="spinner hidden ml-2"></div>
+                                  </button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+            
+          </div>
+      </div>
+  </section>
+
+
+  <footer class=" text-light py-3 mt-5"  style="background-color: rgb(30, 29, 29);" >
+    <div class="footer-container">  
+      <h3>Contact Me</h3>  
+      <ul class="contact-list">  
+          <li>Email: <a href="mailto:sonteadamu5@gmail.com">sonteadamu@5gmail.com</a></li>  
+          <li>Phone: <a href="tel:+251 900083912">0900083912</a></li>  
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/sonte-adamu" target="_blank">linkedin.com/in/sonte-adamu</a></li>  
+          <li>GitHub: <a href="https://github.com/sonteadamu" target="_blank">sonteadamu</a></li>  
+      </ul>  
+  </div>  
+    <div class="row">
+      <div class=" col-6 text-center">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+      </div>
+    <div class=" col-6 collapse  ps-5 pt-2" style="font-family: 'Satisfy', cursive;" id="">
+      <ul class=" gap-2 pt-2 ps-5">
+          <li class=" ps-5">
+            <a class=" text-light" href="#"><i class="bi bi-instagram pe"></i></a>
+          </li>
+          <li class=" ">
+            <a class=" text-light" href="t.me/c4anRG"><i class="bi bi-telegram"></i></a>
+          </li>
+          <li class="">
+            <a class=" text-light" href="#"><i class="bi bi-twitter-x"></i></a>
+          </li>
+          <li class="">
+            <a class=" text-light" href="#"><i class="bi bi-github"></i></a>
+          </li>
+      </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+    <script src="my.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          let lastScrollTop = 0;
+          const navbar = document.getElementById('navbar');
+          
+          window.addEventListener('scroll', function() {
+              let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+              
+              if (currentScrollTop > lastScrollTop) {
+                  // Scrolling down
+                  navbar.style.top = '-80px'; // Adjust based on header height
+              } else {
+                  // Scrolling up
+                  navbar.style.top = '0';
+              }
+              
+              lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+          });
+      });
+  </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+
+
+
+  
+</html>
+
