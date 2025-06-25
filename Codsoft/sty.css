@@ -1,0 +1,377 @@
+body {   
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    background-color: #0a0835; 
+     color:#eee6e6;  
+    text-decoration: none;  
+}  
+
+header {  
+    background: #0a0835;  
+    color:#eee6e6;  
+    padding: 0;  
+    margin-top: 35px;
+   
+}  
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px; /* Optional: limits container width */
+    margin: 0 auto; /* centers container if max-width is set */
+    padding: 0 30px; /* optional padding */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-family: 'Arial', sans-serif; /* Optional: styling */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* main style*/
+main {  
+    padding: 0; 
+     
+}  
+
+#intro {  
+    background-color: #0a0835;  
+    display: flex;  
+    align-items: flex-start;  
+    flex-wrap: wrap;  
+  margin: 20px 0;  
+    overflow: hidden; /* Prevent overflow during animation */  
+}  
+
+.photo {  
+    margin-left: 50px; /* Space between description and photo */  
+    animation: slide-in-right 1s ease-out forwards; /* Apply animation */  
+}  
+
+.photo img {  
+    width: 400px; /* Adjust the width as needed */  
+    height: auto;  
+    border-radius: 8px; /* Optional: adds rounded corners */  
+}  
+
+.description {  
+    margin-top: 150px;  
+    max-width: 800px; /* Adjust max width as needed */   
+     padding: 20px;  
+    animation: slide-in-left 1s ease-out forwards; /* Apply animation */  
+}  
+
+.description h2 {   
+    padding-left: 20%;   
+    margin: 0; /* No margin for the name heading */  
+    font-size: 60px; /* Larger font size for the photo name */  
+    font-weight: bold; /* Bold text for the photo name */  
+    color: #eee6e6;  
+}  
+
+.description p {  
+    padding-left: 20%; /* Adjusted for better alignment */  
+    margin: 50px ; /* Added margin-top to create space from the h2 element, no margin on the sides */  
+    font-size: 60px; /* Adjust font size for the father's name */  
+    margin-top: 5px;
+    color: #eee6e6; /* Optional: different color for father's name */  
+}
+.description p span {  
+    font-weight: bold; /* Bold text for the father's name */  
+}  
+
+
+/* Common section styling for all sections */
+section {  
+    margin: 20px 0;  
+    background:  #0a0835;  
+    padding: 20px;  
+    border-radius: 5px; 
+    border-top: 2px solid #0a0835;  
+  border-bottom: 2px solid #0a0835;   
+    text-decoration: none;
+
+}  
+
+/* Keyframes for slide animations */  
+@keyframes slide-in-right {  
+    0% {  
+        transform: translateX(100%); /* Start from right */  
+        opacity: 0; /* Start invisible */  
+    }  
+    100% {  
+        transform: translateX(0); /* End at original position */  
+        opacity: 1; /* End fully visible */  
+    }  
+}  
+
+@keyframes slide-in-left {  
+    0% {  
+        transform: translateX(-100%); /* Start from left */  
+        opacity: 0; /* Start invisible */  
+    }  
+    100% {  
+        transform: translateX(0); /* End at original position */  
+        opacity: 1; /* End fully visible */  
+    }  
+}  
+
+button {  
+    padding: 10px 15px;  
+    background: #171717;  
+    border: none;  
+    color: #fff;  
+    cursor: pointer;  
+}  
+
+button a {  
+    color: #fff;  
+    text-decoration: none;  
+} 
+/* About section styling */
+.about {
+    background: rgba(230, 234, 238, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    width:70%;
+    margin: 0 auto;
+    color: rgb(248, 245, 245);
+}
+#about h5 {  
+  margin-top: 0;  
+  font-size: 1.5rem;  
+}  
+#about p {  
+  font-size: 1.2rem;  
+  line-height: 1.5;  
+  margin-top: 10px;  
+}  
+#about h1 {  
+  font-family: 'Satisfy', cursive;  
+  font-size: 2.5rem;  
+  color: #fff;  
+  text-align: center;  
+  margin-bottom: 20px;  
+}  
+/* Card Styles (for projects or achievements) */  
+.card {  
+  background: rgba(85, 83, 83, 0.2);  
+  border-radius: 15px;  
+  backdrop-filter: blur(10px);  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+  width: 90%;  
+  margin: 20px auto;  
+  transition: all 0.3s;  
+  position: relative;  
+  overflow: hidden;  
+}  
+
+.card-body {  
+  background: transparent;  
+  padding: 20px;  
+}  
+
+.card:hover {  
+  box-shadow: 0 8px 40px rgba(255,255,255,0.7);  
+}  
+
+.shine {  
+  position: absolute;  
+  top: -50%;  
+  left: -50%;  
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(-30deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(-30deg);
+    }
+}
+
+.read::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(234, 235, 244, 0.2); /* Light background on hover */
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0; /* Behind the text */
+}
+
+.read:hover::after {
+    opacity: 1; /* Show the background on hover */
+}
+
+.read span {
+    position: relative;
+    z-index: 1; /* Above the background */
+}
+
+
+.read:hover {
+    color: #e9eaf5; /* Text color on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 4px 20px rgba(76, 82, 141, 0.5); /* Shadow effect */
+}
+
+
+/* Navbar styles */
+#navbar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+transition: top 0.3s;
+}
+/*project style*/
+
+/* Container for all cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual card styles */
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image styles */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay for pop-up text */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 8, 53, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show overlay on hover */
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* Text inside overlay */
+.text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Gallery Thumbnails */
+.achievement-thumb {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.achievement-thumb:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* Full Image in Modal */
+#fullImage {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 20px;
+}
+
+
+
+footer {  
+    text-align: center;  
+    padding: 10px 0;  
+    background: #0a0835;  
+    color: #fff;  
+
+    /* Optional: add hover effect to icons */
+.social-media a:hover {
+  color: #4CAF50; /* or any color you prefer */
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+}
